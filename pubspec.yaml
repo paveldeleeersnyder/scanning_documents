@@ -1,0 +1,23 @@
+name: scan_documents
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.10.8
+
+dependencies:
+  document_frame_scanner: ^0.0.2
+  flutter:
+    sdk: flutter
+  
+  google_mlkit_document_scanner: ^0.2.0
+  provider: ^6.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
