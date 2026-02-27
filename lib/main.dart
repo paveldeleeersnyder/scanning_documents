@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './google_mlkit_page.dart';
 import './document_frame_scanner.dart';
 import './flutter_doc_scanner.dart';
+import './document_camera_frame.dart';
 
 void main() {
   runApp(const MainApp());
@@ -51,6 +52,9 @@ class _HomePageState extends State<HomePage> {
       case 2:
         page = FlutterDocumentScanner();
         break;
+      case 3:
+        page = DocumentCamera();
+        break;
       default:
         throw UnimplementedError("Should not be able to select this page");
     }
@@ -71,6 +75,10 @@ class _HomePageState extends State<HomePage> {
                     NavigationRailDestination(
                       icon: Icon(Icons.add_photo_alternate_rounded),
                       label: Text('Document frame scanner'),
+                    ),
+                    NavigationRailDestination(
+                      icon: Icon(Icons.add_photo_alternate_rounded),
+                      label: Text('Flutter Document Scanner'),
                     ),
                     NavigationRailDestination(
                       icon: Icon(Icons.add_photo_alternate_rounded),

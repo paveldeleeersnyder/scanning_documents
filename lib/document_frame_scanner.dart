@@ -27,7 +27,7 @@ class _DocumentScannerState extends State<DocumentScanner> {
         Center(
           child: ElevatedButton(
             onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => DocumentScannerScreen(Key(AutofillHints.addressCity), scanImage)),
+              MaterialPageRoute(builder: (_) => DocumentScannerScreen(setImage: scanImage,)),
             ),
             child: const Text('Start Document Capture'),
           )
@@ -44,7 +44,7 @@ class _DocumentScannerState extends State<DocumentScanner> {
 }
 
 class DocumentScannerScreen extends StatelessWidget {
-  DocumentScannerScreen(Key key, this.setImage) : super(key: key);
+  const DocumentScannerScreen({super.key, required this.setImage});
 
   final Function(String) setImage;
 
